@@ -7,6 +7,8 @@ import navIcon4 from "../assets/img/nav-icon4.svg";
 import navIcon5 from "../assets/img/nav-icon5.svg";
 
 export const Footer = () => {
+  const currentYear = new Date().getFullYear(); // Get the current year dynamically
+
   return (
     <footer className="footer" id="connect">
       <Container>
@@ -41,9 +43,13 @@ export const Footer = () => {
                 <img src={navIcon5} alt="Freelancer" />
               </a>
             </div>
-            <div className="d-flex justify-content-between align-items-center mt-4">
-              <p className="footer-copyright">&copy; 2025. <a href="#">Mohammad Hamza</a></p>
-              <p className="footer-copyright">Design & Dev ✦ <a href="#">Mohammad Hamza</a></p>
+            <div className="d-flex justify-content-between align-items-center mt-4 copyright-container">
+              <p className="footer-copyright">
+                &copy; {currentYear}. <a href="#">Mohammad Hamza</a>
+              </p>
+              <p className="footer-copyright">
+                Design & Dev ✦ <a href="#">Mohammad Hamza</a>
+              </p>
             </div>
           </Col>
         </Row>
